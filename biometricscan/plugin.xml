@@ -6,17 +6,20 @@
     <description>Cordova Biometric Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,biometric</keywords>
-
-    <js-module src="www/biometric.js" name="biometric">
-        <clobbers target="bioscan" />
-    </js-module>
+    <repo>https://github.com/artloric/cordova-plugin-biometricscan.git</repo>
 
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="Bioservice">
-            <param name="android-package" value="org.apache.cordova.plugin.Bioservice" />
-        </feature>
+            <feature name="Bioservice">
+                <param name="android-package" value="org.apache.cordova.Bioservice" />
+            </feature>
         </config-file>
+
+        <source-file src="src/android/Bioservice.java" target-dir="src/org/apache/cordova/bioservice/" />
+
+        <js-module src="www/biometric.js" name="biometric">
+            <clobbers target="bioscan" />
+        </js-module>
     </platform>
 
 

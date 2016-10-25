@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-biometricscan" version="1.0.0">
+
+    <name>Biometric</name>
+
+    <description>Cordova Biometric Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,biometric</keywords>
+    <repo>https://github.com/artloric/cordova-plugin-biometricscan.git</repo>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+     <js-module src="www/biometric.js" name="biometric">
+            <clobbers target="bioscan" />
+        </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Bioservice">
+                <param name="android-package" value="org.apache.cordova.Bioservice" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Bioservice.java" target-dir="src/org/apache/cordova/bioservice/" />
+    </platform>
+
+
+</plugin>

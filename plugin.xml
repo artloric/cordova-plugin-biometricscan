@@ -27,7 +27,7 @@
         <source-file src="src/android/Bioservice.java" target-dir="src/org/apache/cordova/bioservice" />
         
         <!-- SDK HRT jar lib files -->
-        <source-file src="libs/BardcodeLib.jar" target-dir="src/org/apache/cordova/bioservice/jar" />
+        <source-file src="libs/BarcodeLib.jar" target-dir="src/org/apache/cordova/bioservice/jar" />
         <source-file src="libs/BiometricLib.jar" target-dir="src/org/apache/cordova/bioservice/jar" />
     </platform>
 

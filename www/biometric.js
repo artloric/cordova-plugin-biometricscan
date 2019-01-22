@@ -5,9 +5,12 @@ There it will look for our custom class.
 We overwrite one of the exec functions inherited by the extension of a cordova plugin class and pass it our own class and method actions.
 */
 window.bioscan = function(str) {
-	
+
 	cordova.exec(function(message) {
 		console.log('String back from Java class:' + message);
+
+		const addToLog = [];
+		addToLog.push(message);
 	},
 
 		function(error) {
